@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Indiana Jones Quiz</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header role='banner'>
+      <h1>Indiana Jones Quiz</h1>
+    </header>
+    <main role='main'>
+      <div class='intro'>
+        <h2>Let's see how much you know!</h2>
+        <p>Some content about the quiz</p>
+        <button id='startButton'>Begin</button>
+      </div>
+      <div class='tracker'>
+        <ul>
+        <li>Question #</li>
+        <li>Score</li>
+        </ul>
+      </div>
+      <section role='section'>
+      <form class='question'>
+        <h2>Question content here</h2>
+        <input type='radio'>Choice 1</input><br>
+        <input type='radio'>Choice 2</input><br>
+        <input type='radio'>Choice 3</input><br>
+        <input type='radio'>Choice 4</input><br>
+        <button>Submit</button>
+      </form>
+      </section>
+      <section role='section'>
+      <div class='answerFeedback'>
+        <h3>You have chosen...wisely (or ...poorly)</h3>
+        <p>Feedback either way, give correct answer if incorrect</p>
+        <button>Next Question</button>
+      </div>
+      </section>
+      <section role='section'>
+        <div class='endResult'>
+          <h2>Quiz Results</h2>
+          <p>Score, some other content about completing the quiz and option to start over</p>
+          <button>Try Again</button>
+        </div>
+      </section>
+      </main>
+    <script src="script.js"></script>
+  </body>
+</html>
