@@ -11,42 +11,53 @@
       <h1>Indiana Jones Quiz</h1>
     </header>
     <main role='main'>
-      <div class='intro'>
-        <h2>Let's see how much you know!</h2>
-        <p>Some content about the quiz</p>
-        <button id='startButton'>Begin</button>
+        <div id="intro-page">
+            <h2>Let's see how much you know!</h2>
+            <p>Some content about the quiz</p>
+            <form action='' method="POST">
+                <input type="hidden" name="question" value="1"> 
+                <button id='start-button'>Begin</button>
+            </form>
+        </div>
+        <div id='tracker' class='tracker'>
+          <ul>
+              <li>Question # <span id='question-number'></span></li>
+              <li>Score: <span id='user-score'></span></li>
+          </ul>
       </div>
-      <div class='tracker'>
-        <ul>
-        <li>Question #</li>
-        <li>Score</li>
-        </ul>
-      </div>
-      <section role='section'>
-      <form class='question'>
-        <h2>Question content here</h2>
-        <input type='radio'>Choice 1</input><br>
-        <input type='radio'>Choice 2</input><br>
-        <input type='radio'>Choice 3</input><br>
-        <input type='radio'>Choice 4</input><br>
-        <button>Submit</button>
-      </form>
-      </section>
-      <section role='section'>
-      <div class='answerFeedback'>
-        <h3>You have chosen...wisely (or ...poorly)</h3>
-        <p>Feedback either way, give correct answer if incorrect</p>
-        <button>Next Question</button>
-      </div>
-      </section>
-      <section role='section'>
-        <div class='endResult'>
-          <h2>Quiz Results</h2>
-          <p>Score, some other content about completing the quiz and option to start over</p>
-          <button>Try Again</button>
+        <section id='question-page'>
+          <div role='section'>
+              <h2 id='question-text'>Question content here</h2>
+              <form id ='question-form' class='question'>                
+                  <input type='radio' id='choice-1' name='choice' value='' />
+                  <label id='label-1' for='choice-1'></label><br>
+                  <input type='radio' id='choice-2' name='choice' value='' />
+                  <label id='label-2' for='choice-2'></label><br>
+                  <input type='radio' id='choice-3' name='choice' value='' />
+                  <label id='label-3' for='choice-3'></label><br>
+                  <input type='radio' id='choice-4' name='choice' value='' />
+                  <label id='label-4' for='choice-4'></label><br>
+                  <button id='submit-answer'>Submit</button>
+              </form>
+          </div>
+        </section>
+        <section role='section' id='feedback-section'>
+            <div class='answer-feedback'>
+                <h3 id='answer-result'></h3>
+                <p id='answer-comment'></p>
+                <button id='next-question'>Next Question</button>
+                <button id='see-results'>See Results</button>
+            </div>
+        </section>
+      <section id='end-result-section' role='section'>
+        <div class='end-result'>
+          <h2 >Your final score is: <span id='final-score'></span>/10</h2>
+          <p id='final-feedback'></p>
+          <button id='start-over'>Try Again</button>
         </div>
       </section>
       </main>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

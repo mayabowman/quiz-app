@@ -19,3 +19,23 @@
   li {
     list-style: none;
   }
+
+  #question-page {
+    display: none;
+  }
+
+  #tracker {
+    display: none;
+  }
+
+  #feedback-section {
+    display: none;
+  }
+
+  #see-results {
+    display: none;
+  }
+
+  #end-result-section {
+    display: none;
+  }
