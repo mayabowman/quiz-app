@@ -1,3 +1,57 @@
+@font-face {
+  font-family: 'SF Fedora Symbols';
+  src: url('fonts/SFFedoraSymbols.eot');
+  src: local('SF Fedora Symbols'), local('SFFedoraSymbols'),
+      url('fonts/SFFedoraSymbols.eot?#iefix') format('embedded-opentype'),
+      url('fonts/SFFedoraSymbols.woff2') format('woff2'),
+      url('fonts/SFFedoraSymbols.woff') format('woff'),
+      url('fonts/SFFedoraSymbols.ttf') format('truetype'),
+      url('fonts/SFFedoraSymbols.svg#SFFedoraSymbols') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Fedora Titles';
+  src: url('fonts/SFFedoraTitles.eot');
+  src: local('SF Fedora Titles'), local('SFFedoraTitles'),
+      url('fonts/SFFedoraTitles.eot?#iefix') format('embedded-opentype'),
+      url('fonts/SFFedoraTitles.woff2') format('woff2'),
+      url('fonts/SFFedoraTitles.woff') format('woff'),
+      url('fonts/SFFedoraTitles.ttf') format('truetype'),
+      url('fonts/SFFedoraTitles.svg#SFFedoraTitles') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Fedora Outline';
+  src: url('fonts/SFFedoraOutline.eot');
+  src: local('SF Fedora Outline'), local('SFFedoraOutline'),
+      url('fonts/SFFedoraOutline.eot?#iefix') format('embedded-opentype'),
+      url('fonts/SFFedoraOutline.woff2') format('woff2'),
+      url('fonts/SFFedoraOutline.woff') format('woff'),
+      url('fonts/SFFedoraOutline.ttf') format('truetype'),
+      url('fonts/SFFedoraOutline.svg#SFFedoraOutline') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Fedora';
+  src: url('fonts/SFFedora.eot');
+  src: local('SF Fedora'), local('SFFedora'),
+      url('fonts/SFFedora.eot?#iefix') format('embedded-opentype'),
+      url('fonts/SFFedora.woff2') format('woff2'),
+      url('fonts/SFFedora.woff') format('woff'),
+      url('fonts/SFFedora.ttf') format('truetype'),
+      url('fonts/SFFedora.svg#SFFedora') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,6 +60,14 @@
   body {
     font-family:Arial, Helvetica, sans-serif;
     text-align: center;
+  }
+
+  h1 {
+    font-family: 'SF Fedora Outline';
+  }
+
+  h2 {
+    font-family: 'SF Fedora Titles';
   }
   
   header, .tracker, .answerFeedback {
@@ -39,3 +101,4 @@
   #end-result-section {
     display: none;
   }
+
