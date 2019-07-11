@@ -175,30 +175,25 @@ $('#see-results').on('click', function(event){
 
 function showFinalResult() {
     $('#question-page').hide();
-    //$('#feedback-section').hide();
+    $('#feedback-section').hide();
     $('#end-result-section').show();
     //this function will be responsible for displaying the user's final score 
     $('#final-score').text(appData.currentScore);
-    //some content about the quiz
-    $('#final-feedback').text('different feedback based on score');
-    //provide a button to start the quiz 
-     
-
-    console.log('finalResult ran');
+    //content about the how the user did
+    if (appData.currentScore <= 3) {
+        $('#final-feedback').text('Did you only watch Crystal Skull? Because that doesn\'t count...');
+    }
+    else if (appData.currentScore >= 4 &&  appData.currentScore < 9) {
+        $('#final-feedback').text('Respectable, but might I suggest Netflix for review...');
+    }
+    else {
+        $('#final-feedback').text('I guess all I really need to remind you of is...do not let the Grail pass the Seal on your way out...');
+    }
+    
 }
-
+//provide a button to start the quiz 
 $('#start-over').on('click', function(event){
     location.reload();
-    //debugger;
-    // $('#end-result-section').hide();
-    // $('#question-page').show();
-    // generateQuestion(questionNum);
     
 });
 
-//main();
-// generateQuestion();
-// answerFeedback();
-// scoreTracker();
-// questionTracker();
-// finalResult();
