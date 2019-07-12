@@ -181,13 +181,13 @@ function showFinalResult() {
     $('#final-score').text(appData.currentScore);
     //content about the how the user did
     if (appData.currentScore <= 3) {
-        $('#final-feedback').text('Did you only watch Crystal Skull? Because that doesn\'t count...');
+        $('#final-feedback').stext('\"You lost today, kid. But that doesn\'t mean you have to like it.\" Try again!');
     }
     else if (appData.currentScore >= 4 &&  appData.currentScore < 9) {
-        $('#final-feedback').text('Respectable, but might I suggest Netflix for review...');
+        $('#final-feedback').text('\"Fly? Yes. Land? No!\" Nice job, but take another stab at it!');
     }
     else {
-        $('#final-feedback').text('I guess all I really need to remind you of is...do not let the Grail pass the Seal on your way out...');
+        $('#final-feedback').text('\"Fortune and glory, kid. Fortune and glory.\" Well done, you know your stuff!');
     }
     
 }

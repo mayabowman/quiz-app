@@ -53,52 +53,38 @@
 
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
   
-  body {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-  }
-
-  h1 {
-    font-family: 'SF Fedora Outline';
-  }
-
-  h2 {
-    font-family: 'SF Fedora Titles';
-  }
+}
   
-  header, .tracker, .answerFeedback {
-    background-color: lightgrey;
-  }
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: url('images/brown_leather_texture_by_maxdaten_d1pv2ff.png');
+}
+
+h1 {
+  font-family: 'SF Fedora Outline';
+  background: linear-gradient(to bottom, firebrick, khaki);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: 'SF Fedora Titles';
+}
   
-  .intro, .question, .endResult {
-    background-color: darkgrey;
-  }
+li {
+  list-style: none;
+}
+
+#question-page, #tracker, #feedback-section, #see-results, #end-result-section {
+  display: none;
+}
+
   
-  li {
-    list-style: none;
-  }
-
-  #question-page {
-    display: none;
-  }
-
-  #tracker {
-    display: none;
-  }
-
-  #feedback-section {
-    display: none;
-  }
-
-  #see-results {
-    display: none;
-  }
-
-  #end-result-section {
-    display: none;
-  }
 
