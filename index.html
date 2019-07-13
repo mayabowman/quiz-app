@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width">
     <title>Indiana Jones Quiz</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
   </head>
   <body>
     <header role='banner'>
       <h1>Indiana Jones Quiz</h1>
     </header>
     <main role='main'>
+      <div id='quiz-content'>
         <div id="intro-page">
-            <h2>Let's see how much you know!</h2>
+            <h2 id='opener'><i>LET'S SEE HOW MUCH YOU KNOW!</i></h2>
             <p>Some content about the quiz</p>
             <form action='' method="POST">
                 <input type="hidden" name="question" value="1"> 
@@ -46,16 +48,17 @@
                 <h3 id='answer-result'></h3>
                 <p id='answer-comment'></p>
                 <button id='next-question'>Next Question</button>
-                <button id='see-results'>See Results</button>
+                <button id='see-results'>See Final Results</button>
             </div>
         </section>
-      <section id='end-result-section' role='section'>
-        <div class='end-result'>
-          <h2 >Your final score is: <span id='final-score'></span>/10</h2>
-          <p id='final-feedback'></p>
-          <button id='start-over'>Try Again</button>
+        <section id='end-result-section' role='section'>
+          <div class='end-result'>
+            <h2 >Your final score is: <span id='final-score'></span>/10</h2>
+            <p id='final-feedback'></p>
+            <button id='start-over'>Try Again</button>
+          </div>
+        </section>
         </div>
-      </section>
       </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="index.js"></script>
