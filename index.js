@@ -137,9 +137,12 @@ $('#submit-answer').on('click', function(event){
 function generateFeedback(questionNum) {
     //hide question
     $('#question-page').hide();
+    const poorly = "images/poorly.png";
+    const wisely = "images/wisely.png";
     //test if selection is correct, if yes, display message
     if ($('input:checked').val() === appData.questions[questionNum -1].correctAnswer) {
         $('#answer-result').text('You have chosen...wisely');
+        $('#result-image').attr('src', wisely).attr('alt', 'wisely');
         $('#answer-comment').hide();
         appData.currentScore++;
         $('#user-score').text(appData.currentScore);
@@ -149,6 +152,7 @@ function generateFeedback(questionNum) {
     else {
         $('#answer-result').text('You have chosen...poorly');
         $('#answer-comment').show();
+        $('#result-image').attr('src', poorly).attr('alt', 'poorly');
         $('#answer-comment').text('The correct answer is: ' + `${appData.questions[questionNum -1].correctAnswer}`);
     }
     if (appData.currentQuestion === 10) {

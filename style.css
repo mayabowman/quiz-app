@@ -60,7 +60,7 @@
 #quiz-content {
   background: url('images/paper-1074136_1280.jpg');
   width: 50%;
-  height: 400px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -80,6 +80,7 @@ h1 {
   background: linear-gradient(to bottom, #c73926, #e2e54f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 3em;
 }
 
 #opener {
@@ -89,9 +90,37 @@ h1 {
 #tracker {
   padding: 20px;
 }
-  
+
+fieldset {
+  text-align: left;
+  border: 0;
+  display: inline;
+  margin: auto;
+}  
 li {
   list-style: none;
+}
+
+#question-text {
+  margin-bottom: 10px;
+}
+
+button {
+  width: auto;
+  padding: 15px;
+  background-color: #8B4513;
+  color: #e2e54f;
+  cursor: pointer;
+  border: 3px solid #8B4513;
+}
+
+button:hover {
+  border: 3px solid #620;
+}
+
+img {
+  display: block;
+  margin: auto;
 }
 
 #question-page, #tracker, #feedback-section, #see-results, #end-result-section {

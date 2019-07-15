@@ -30,7 +30,8 @@
         <section id='question-page'>
           <div role='section'>
               <h2 id='question-text'>Question content here</h2>
-              <form id ='question-form' class='question'>                
+              <form id ='question-form' class='question'>  
+                <fieldset>            
                   <input type='radio' id='choice-1' name='choice' value='' />
                   <label id='label-1' for='choice-1'></label><br>
                   <input type='radio' id='choice-2' name='choice' value='' />
@@ -39,13 +40,17 @@
                   <label id='label-3' for='choice-3'></label><br>
                   <input type='radio' id='choice-4' name='choice' value='' />
                   <label id='label-4' for='choice-4'></label><br>
-                  <button id='submit-answer'>Submit</button>
+                </fieldset>  
+                <div>
+                <button id='submit-answer'>Submit</button>
+              </div>
               </form>
           </div>
         </section>
         <section role='section' id='feedback-section'>
             <div class='answer-feedback'>
                 <h3 id='answer-result'></h3>
+                <img id='result-image' alt='' />
                 <p id='answer-comment'></p>
                 <button id='next-question'>Next Question</button>
                 <button id='see-results'>See Final Results</button>
