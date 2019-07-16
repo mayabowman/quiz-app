@@ -14,8 +14,8 @@
     <main role='main'>
       <div id='quiz-content'>
         <div id="intro-page">
-            <h2 id='opener'><i>LET'S SEE HOW MUCH YOU KNOW!</i></h2>
-            <p>Some content about the quiz</p>
+            <h2 id='opener'><i>TEST YOUR KNOWLEDGE...</i></h2>
+            <img src="images/idol.png" alt="Indy and the idol" id='idol' />
             <form action='' method="POST">
                 <input type="hidden" name="question" value="1"> 
                 <button id='start-button'>Begin</button>
@@ -31,19 +31,27 @@
           <div role='section'>
               <h2 id='question-text'>Question content here</h2>
               <form id ='question-form' class='question'>  
-                <fieldset>            
-                  <input type='radio' id='choice-1' name='choice' value='' />
-                  <label id='label-1' for='choice-1'></label><br>
-                  <input type='radio' id='choice-2' name='choice' value='' />
-                  <label id='label-2' for='choice-2'></label><br>
-                  <input type='radio' id='choice-3' name='choice' value='' />
-                  <label id='label-3' for='choice-3'></label><br>
-                  <input type='radio' id='choice-4' name='choice' value='' />
-                  <label id='label-4' for='choice-4'></label><br>
+                <fieldset>   
+                  <div class='question-div'>        
+                    <input type='radio' id='choice-1' name='choice' value='' />
+                    <label id='label-1' for='choice-1'></label>
+                  </div> 
+                  <div class='question-div'>
+                    <input type='radio' id='choice-2' name='choice' value='' />
+                    <label id='label-2' for='choice-2'></label>
+                  </div>
+                  <div class='question-div'>
+                    <input type='radio' id='choice-3' name='choice' value='' />
+                    <label id='label-3' for='choice-3'></label>
+                  </div>
+                  <div class='question-div'></div>
+                    <input type='radio' id='choice-4' name='choice' value='' />
+                    <label id='label-4' for='choice-4'></label>
+                  </div>
                 </fieldset>  
                 <div>
-                <button id='submit-answer'>Submit</button>
-              </div>
+                  <button id='submit-answer'>Submit</button>
+                </div>
               </form>
           </div>
         </section>

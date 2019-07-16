@@ -57,16 +57,8 @@
   margin: 0;
 }
 
-#quiz-content {
-  background: url('images/paper-1074136_1280.jpg');
-  width: 50%;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 header {
-  padding: 50px;
+  padding: 45px;
 }
   
 body {
@@ -80,11 +72,24 @@ h1 {
   background: linear-gradient(to bottom, #c73926, #e2e54f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3em;
+  font-size: 1.7em;
+}
+
+#quiz-content {
+  background: url('images/paper-1074136_1280.jpg');
+  /* width: 100%; */
+  height: auto;
+  margin: 0 20px 0 20px;
 }
 
 #opener {
   font-family: 'SF Fedora Titles';
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+#idol {
+  margin-bottom: 20px;
 }
 
 #tracker {
@@ -105,13 +110,27 @@ li {
   margin-bottom: 10px;
 }
 
+input {
+  cursor: pointer;
+}
+
+.question-div{
+  margin-bottom: 15px;
+}
+
+
 button {
   width: auto;
-  padding: 15px;
-  background-color: #8B4513;
-  color: #e2e54f;
+  padding: 20px;
+  /* background-color: #8B4513; */
+  background-image: url('images/brown_leather_texture_by_maxdaten_d1pv2ff.png');
+  color: #DAA520;
   cursor: pointer;
-  border: 3px solid #8B4513;
+  border-radius: 10% / 50%;
+  font-family: 'Special Elite', cursive;
+  text-shadow: 0px 1px 1px #808080;
+  font-size: 1em;
+  /* border: 3px solid #8B4513; */
 }
 
 button:hover {
