@@ -80,6 +80,7 @@ h1 {
   /* width: 100%; */
   height: auto;
   margin: 0 20px 0 20px;
+  padding: 15px;
 }
 
 #opener {
@@ -96,6 +97,11 @@ h1 {
   padding: 20px;
 }
 
+#tracker-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 fieldset {
   text-align: left;
   border: 0;
@@ -104,6 +110,7 @@ fieldset {
 }  
 li {
   list-style: none;
+  display: inline;
 }
 
 #question-text {
@@ -121,20 +128,26 @@ input {
 button {
   width: auto;
   padding: 20px;
-  /* background-color: #8B4513; */
-  background-image: url('images/brown_leather_texture_by_maxdaten_d1pv2ff.png');
-  color: #DAA520;
+  background-color: transparent;
+  color: #000000;
   cursor: pointer;
-  border-radius: 10% / 50%;
+  /* border-radius: 10% / 50%; */
   font-family: 'Special Elite', cursive;
   text-shadow: 0px 1px 1px #808080;
   font-size: 1em;
-  /* border: 3px solid #8B4513; */
   margin-bottom: 30px;
+  overflow: hidden;
+  outline: none;
+  /* border: 1px solid rgba(0,0,0,0.1); */
+  border: 2px solid #bb8f4c;
+  box-shadow: 
+    inset 0 2px 3px rgba(255,255,255,0.3),
+    inset 0 -2px 3px rgba(0,0,0,0.3),
+    0 1px 1px rgba(255,255,255,0.9);
 }
 
 button:hover {
-  border: 3px solid #620;
+  border: 2px solid #8f7143;
 }
 
 #answer-result {
@@ -150,6 +163,15 @@ button:hover {
   margin-top: 15px;
 }
 
+#see-results {
+  margin-top: 15px;
+}
+
+#final-feedback {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 img {
   display: block;
   margin: auto;
@@ -159,5 +181,21 @@ img {
   display: none;
 }
 
-  
+@media screen and (min-width: 600px) {
+  #quiz-content {
+    background: url('images/paper-1074136_1280.jpg');
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-family: 'SF Fedora';
+    background: linear-gradient(to bottom, #c73926, #e2e54f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+  }
+}
 

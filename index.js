@@ -185,7 +185,7 @@ function showFinalResult() {
     $('#final-score').text(appData.currentScore);
     //content about the how the user did
     if (appData.currentScore <= 3) {
-        $('#final-feedback').stext('\"You lost today, kid. But that doesn\'t mean you have to like it.\" Try again!');
+        $('#final-feedback').text('\"You lost today, kid. But that doesn\'t mean you have to like it.\" Try again!');
     }
     else if (appData.currentScore >= 4 &&  appData.currentScore < 9) {
         $('#final-feedback').text('\"Fly? Yes. Land? No!\" Nice job, but take another stab at it!');
