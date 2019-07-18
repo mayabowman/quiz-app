@@ -99,7 +99,8 @@ h1 {
 
 #tracker-section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-inline-start: 0px; 
 }
 
 fieldset {
@@ -108,6 +109,8 @@ fieldset {
   display: inline;
   margin: auto;
 }  
+
+
 li {
   list-style: none;
   display: inline;
