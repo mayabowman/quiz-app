@@ -180,18 +180,22 @@ $('#see-results').on('click', function(event){
 function showFinalResult() {
     $('#question-page').hide();
     $('#feedback-section').hide();
+    $('#tracker-section').hide();
     $('#end-result-section').show();
     //this function will be responsible for displaying the user's final score 
     $('#final-score').text(appData.currentScore);
     //content about the how the user did
     if (appData.currentScore <= 3) {
-        $('#final-feedback').text('\"You lost today, kid. But that doesn\'t mean you have to like it.\" Try again!');
+        $('#final-feedback').text('\"You lost today, kid. But that doesn\'t mean you have to like it.\"');
+        $('#final-comment').text('Try again!');
     }
     else if (appData.currentScore >= 4 &&  appData.currentScore < 9) {
-        $('#final-feedback').text('\"Fly? Yes. Land? No!\" Nice job, but take another stab at it!');
+        $('#final-feedback').text('\"Fly? Yes. Land? No!\"');
+        $('#final-comment').text('Nice job, but take another stab at it!');
     }
     else {
-        $('#final-feedback').text('\"Fortune and glory, kid. Fortune and glory.\" Well done, you know your stuff!');
+        $('#final-feedback').text('\"Fortune and glory, kid. Fortune and glory.\"');
+        $('#final-comment').text('Well done, you know your stuff!');
     }
     
 }
