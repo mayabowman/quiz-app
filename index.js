@@ -175,6 +175,7 @@ function handleNextQuestionButton() {
 
 $('#see-results').on('click', function(event){
     showFinalResult();
+    $('audio#whip')[0].play();
 });
 
 function showFinalResult() {
