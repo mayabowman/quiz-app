@@ -102,6 +102,7 @@ let appData = {
 $('#start-button').on('click', function(event) {
     event.preventDefault();
     generateQuestion(appData.currentQuestion);
+    $('audio#whip')[0].play();
 }) 
 
 /** this function will be responsible for generating the quiz questions
