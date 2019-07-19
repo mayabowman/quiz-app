@@ -104,23 +104,20 @@ $('#start-button').on('click', function(event) {
     generateQuestion(appData.currentQuestion);
 }) 
 
+/** this function will be responsible for generating the quiz questions
+    it should iterate through the questions array, and display one question
+    at a time, user can submit answer */
 function generateQuestion(questionNum) {
-    //this function will be responsible for generating the quiz questions
-    //it should iterate through the questions array, and display one question
-    //at a time, user can submit answer
+    
     const q = appData.questions[questionNum - 1];
     $('#intro-page').hide();
     $('#feedback-section').hide();
     $('#tracker').show();
     $('#question-text').text(q.question);
-    $('#label-1').text(q.option1);
-    $('#label-2').text(q.option2);
-    $('#label-3').text(q.option3);
-    $('#label-4').text(q.option4);
-    $('#choice-1').attr('value', q.option1);
-    $('#choice-2').attr('value', q.option2);
-    $('#choice-3').attr('value', q.option3);
-    $('#choice-4').attr('value', q.option4);
+    for (let i = 1; i <= 4; i++) {
+        $(`#label-${i}`).text(q[`option${i}`]);
+        $(`#choice-${i}`).attr('value', q[`option${i}`]);
+    }
     $('#question-number').text(appData.currentQuestion);
     $('#user-score').text(appData.currentScore);
     $('#question-form').trigger("reset");
@@ -133,33 +130,35 @@ $('#submit-answer').on('click', function(event){
     generateFeedback(appData.currentQuestion);
 });
 
-
 function generateFeedback(questionNum) {
-    //hide question
+
+    // hide question
     $('#question-page').hide();
     const poorly = "images/poorly.png";
     const wisely = "images/wisely.png";
-    //test if selection is correct, if yes, display message
+
+    // test if selection is correct, if yes, display message
     if ($('input:checked').val() === appData.questions[questionNum -1].correctAnswer) {
         $('#answer-result').text('You have chosen...wisely');
         $('#result-image').attr('src', wisely).attr('alt', 'wisely');
         $('#answer-comment').hide();
         appData.currentScore++;
         $('#user-score').text(appData.currentScore);
-    }
     
-    //if not, display correct answer
-    else {
+    // if not, display correct answer
+    } else {
         $('#answer-result').text('You have chosen...poorly');
         $('#answer-comment').show();
         $('#result-image').attr('src', poorly).attr('alt', 'poorly');
         $('#answer-comment').text('The correct answer is: ' + `${appData.questions[questionNum -1].correctAnswer}`);
     }
+
     if (appData.currentQuestion === 10) {
         $('#next-question').hide();
         $('#see-results').show();
     }
-    //show feedback
+
+    // show feedback
     $('#feedback-section').show();
 
 }
@@ -171,6 +170,7 @@ $('#feedback-section').on('click', function(event) {
 function handleNextQuestionButton() {
     appData.currentQuestion++;
     generateQuestion(appData.currentQuestion);
+    $('audio#whip')[0].play();
 }
 
 $('#see-results').on('click', function(event){
@@ -182,24 +182,27 @@ function showFinalResult() {
     $('#feedback-section').hide();
     $('#tracker-section').hide();
     $('#end-result-section').show();
-    //this function will be responsible for displaying the user's final score 
+
+    // this function will be responsible for displaying the user's final score 
     $('#final-score').text(appData.currentScore);
-    //content about the how the user did
+
+    // content about the how the user did
     if (appData.currentScore <= 3) {
         $('#final-feedback').text('\"You lost today, kid. But that doesn\'t mean you have to like it.\"');
         $('#final-comment').text('Try again!');
-    }
-    else if (appData.currentScore >= 4 &&  appData.currentScore < 9) {
+    
+    } else if (appData.currentScore >= 4 &&  appData.currentScore < 9) {
         $('#final-feedback').text('\"Fly? Yes. Land? No!\"');
         $('#final-comment').text('Nice job, but take another stab at it!');
-    }
-    else {
+    
+    } else {
         $('#final-feedback').text('\"Fortune and glory, kid. Fortune and glory.\"');
         $('#final-comment').text('Well done, you know your stuff!');
     }
     
 }
-//provide a button to start the quiz 
+// provide a button to start the quiz
+
 $('#start-over').on('click', function(event){
     location.reload();
     

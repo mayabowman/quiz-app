@@ -50,34 +50,36 @@
                 <input type='radio' id='choice-4' name='choice' value='' required />
                 <label id='label-4' for='choice-4'></label>
               </div>
-        </div>
-        </fieldset>
-        <div>
-          <button id='submit-answer'>Submit</button>
-        </div>
-        </form>
-      </section>
-      <section role='section' id='feedback-section'>
-        <div class='answer-feedback'>
-          <h3 id='answer-result'></h3>
-          <img id='result-image' alt='' />
-          <p id='answer-comment'></p>
-          <button id='next-question'>Next Question</button>
-          <button id='see-results'>See Final Results</button>
-        </div>
-      </section>
-      <section id='end-result-section' role='section'>
-        <div class='end-result'>
-          <h2>Your final score is: <span id='final-score'></span>/10</h2>
-          <p id='final-feedback'></p>
-          <p id='final-comment'></p>
-          <button id='start-over'>Start Over</button>
-        </div>
-      </section>
-    </div>
-  </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-  <script src="index.js"></script>
-</body>
+            </fieldset>
+            <div>
+              <button id='submit-answer'>Submit</button>
+            </div>
+          </form>
+        </section>
+        <section role='section' id='feedback-section'>
+          <div class='answer-feedback'>
+            <h3 id='answer-result'></h3>
+            <img id='result-image' alt='' />
+            <p id='answer-comment'></p>
+            <button id='next-question'>Next Question</button>
+            <button id='see-results'>See Final Results</button>
+          </div>
+          <audio id='whip'>
+            <source src='audio/93100__cgeffex__whip-crack-01 (mp3cut.net).mp3'>
+          </audio>
+        </section>
+        <section id='end-result-section' role='section'>
+          <div class='end-result'>
+            <h2>Your final score is: <span id='final-score'></span>/10</h2>
+            <p id='final-feedback'></p>
+            <p id='final-comment'></p>
+            <button id='start-over'>Start Over</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="index.js"></script>
+  </body>
 
 </html>
